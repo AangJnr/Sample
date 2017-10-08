@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/place_call"
+        android:icon="@drawable/ic_phone_grey_500_24dp"
+        android:title="Place a Call"/>
+
+
+    <item
+        android:id="@+id/load_image"
+        android:icon="@drawable/ic_add_a_photo_black_24dp"
+        android:title="Load an Image"/>
+
+
+    <item
+        android:id="@+id/start_camera"
+        android:icon="@drawable/ic_menu_camera"
+        android:title="Start Camera Intent"/>
+
+
+</menu>
