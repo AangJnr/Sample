@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+
+    <include layout="@layout/custom_toolbar_2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_half"
+        android:padding="@dimen/spacing_normal"
+        android:text="Complete the details below to start your booking."
+        android:textColor="@android:color/primary_text_light"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_2"
+                android:paddingRight="@dimen/spacing_2"
+                >
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Trip type"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/trip_type_Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:ms_arrow_tint="@color/colorPrimary"
+                    app:ms_background_color="@color/background"
+                    />
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="From"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/source_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:maxLines="1"
+                    android:padding="@dimen/spacing_normal"
+
+                    />
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Destination"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/destination_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:maxLines="1"
+                    android:padding="@dimen/spacing_normal"
+
+                    />
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Departure Date"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <android.support.percent.PercentRelativeLayout
+                    android:id="@+id/departure_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+
+                    >
+
+
+                    <TextView
+                        android:id="@+id/departure_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/spacing_half"
+                        android:layout_marginRight="@dimen/spacing_half"
+                        android:background="@drawable/border_background"
+                        android:padding="@dimen/spacing_normal"
+                        app:layout_widthPercent="30%"
+                        />
+
+                    <TextView
+                        android:id="@+id/departure_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/spacing_half"
+                        android:layout_marginRight="@dimen/spacing_half"
+                        android:layout_toRightOf="@+id/departure_day"
+                        android:background="@drawable/border_background"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="@dimen/spacing_normal"
+                        app:layout_widthPercent="50%"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/date_time_icon"
+
+                        />
+
+
+                </android.support.percent.PercentRelativeLayout>
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Return Date"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <android.support.percent.PercentRelativeLayout
+                    android:id="@+id/return_date_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    >
+
+
+                    <TextView
+                        android:id="@+id/return_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/spacing_half"
+                        android:layout_marginRight="@dimen/spacing_half"
+                        android:background="@drawable/border_background"
+                        android:padding="@dimen/spacing_normal"
+                        app:layout_widthPercent="30%"
+                        />
+
+                    <TextView
+                        android:id="@+id/return_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/spacing_half"
+                        android:layout_marginRight="@dimen/spacing_half"
+                        android:layout_toRightOf="@+id/return_day"
+                        android:background="@drawable/border_background"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:padding="@dimen/spacing_normal"
+                        app:layout_widthPercent="50%"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/date_time_icon"
+
+                        />
+
+
+                </android.support.percent.PercentRelativeLayout>
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Cabin Class"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/cabin_class_Spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    app:ms_arrow_tint="@color/colorPrimary"
+                    app:ms_background_color="@color/background"
+                    />
+
+
+                <android.support.percent.PercentRelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/ll1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/spacing_half"
+                        android:orientation="vertical"
+                        app:layout_widthPercent="33.3%"
+                        >
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:layout_marginTop="@dimen/spacing_normal"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Teenager"
+                            android:textColor="@android:color/primary_text_light"
+
+                            />
+
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/teenager_Spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:background="@drawable/border_background"
+                            app:ms_arrow_tint="@color/colorPrimary"
+                            app:ms_background_color="@color/background"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:fontFamily="sans-serif-light"
+                            android:text="12 Yrs old and above"
+                            android:textColor="@android:color/primary_text_light"
+                            android:textSize="@dimen/text_size_tiny"
+
+                            />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/spacing_half"
+                        android:layout_toRightOf="@+id/ll1"
+                        android:orientation="vertical"
+                        app:layout_widthPercent="33.3%"
+                        >
+
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:layout_marginTop="@dimen/spacing_normal"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Children"
+                            android:textColor="@android:color/primary_text_light"
+
+                            />
+
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/children_Spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:background="@drawable/border_background"
+                            app:ms_arrow_tint="@color/colorPrimary"
+                            app:ms_background_color="@color/background"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:fontFamily="sans-serif-light"
+                            android:text="2 to 11 Yrs"
+                            android:textColor="@android:color/primary_text_light"
+                            android:textSize="@dimen/text_size_tiny"
+
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/spacing_2"
+                        android:layout_toRightOf="@+id/ll2"
+                        android:orientation="vertical"
+                        app:layout_widthPercent="33.3%"
+                        >
+
+
+                        <TextView
+                            style="@style/TextAppearance.AppCompat.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:layout_marginTop="@dimen/spacing_normal"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Infants"
+                            android:textColor="@android:color/primary_text_light"
+
+                            />
+
+
+                        <com.jaredrummler.materialspinner.MaterialSpinner
+                            android:id="@+id/infants_Spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:background="@drawable/border_background"
+                            app:ms_arrow_tint="@color/colorPrimary"
+                            app:ms_background_color="@color/background"
+                            />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/spacing_half"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Less than 12 Yrs"
+                            android:textColor="@android:color/primary_text_light"
+                            android:textSize="@dimen/text_size_tiny"
+
+                            />
+                    </LinearLayout>
+
+
+                </android.support.percent.PercentRelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_marginLeft="@dimen/spacing_2"
+            android:layout_marginRight="@dimen/spacing_2"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:text="Continue"
+            android:theme="@style/PrimaryButtonAccent"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

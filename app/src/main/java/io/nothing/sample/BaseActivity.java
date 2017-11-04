@@ -13,16 +13,15 @@ import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import io.nothing.sample.utility.Constants;
 import io.nothing.sample.utility.DbHelper;
 import io.nothing.sample.utility.NetworkBroadcastReceiver;
 import io.nothing.sample.utility.PermissionsUtils;
@@ -32,10 +31,10 @@ import io.nothing.sample.utility.PermissionsUtils;
 public class BaseActivity extends AppCompatActivity {
 
     public static DbHelper databaseHelper;
-    String TAG = BaseActivity.class.getSimpleName();
     public static int RESULT_LOAD_IMG = 1;
     public static int PERMISSION_CAMERA = 11;
     public static int CAMERA_INTENT = 90;
+    String TAG = BaseActivity.class.getSimpleName();
     int PERMISSION_STORAGE = 2;
     SharedPreferences prefs;
 
@@ -59,6 +58,14 @@ public class BaseActivity extends AppCompatActivity {
 
     }
 
+
+    TextView setCustomToolbarTitle(String title) {
+
+        TextView titleTextView = (TextView) findViewById(R.id.title);
+        titleTextView.setText(title);
+        return titleTextView;
+
+    }
 
 
     public void showAlertDialog(@Nullable String title, @Nullable String message,
@@ -198,5 +205,18 @@ public class BaseActivity extends AppCompatActivity {
 
 
     }
+
+
+    void setBackListener() {
+        findViewById(R.id.back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
+
+    }
+
+
 
 }

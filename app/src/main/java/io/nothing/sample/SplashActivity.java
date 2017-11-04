@@ -14,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-
 import io.nothing.sample.utility.Constants;
 
 import static java.lang.Thread.sleep;
@@ -196,10 +195,10 @@ public class SplashActivity extends BaseActivity {
             }
         } else*/
         if (!PreferenceManager.getDefaultSharedPreferences(this).getBoolean(Constants.IS_USER_SIGNED_IN, false)) {
-            Log.i(TAG, "Activity name was  null, It means user completed signup process");
+            Log.i(TAG, "Activity name was  null, It means user completed SignUp process");
             Log.i(TAG, "Is signed in? " + PreferenceManager.getDefaultSharedPreferences(this).getBoolean(Constants.IS_USER_SIGNED_IN, false));
 
-            startActivity(new Intent(this, LoginActivity.class));
+            startActivity(new Intent(this, TestActivity.class));
 
         } else {
 

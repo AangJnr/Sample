@@ -11,6 +11,19 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+
+
+    allprojects {
+        repositories {
+            maven {
+                url 'https://jitpack.io'
+            }
+
+            jcenter()
+
+            maven { url "https://maven.google.com" }
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -26,7 +39,15 @@ dependencies {
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:preference-v14:25.3.1'
     compile 'org.ocpsoft.prettytime:prettytime:4.0.1.Final'
+    compile 'com.github.dkharrat.nexusdialog:nexusdialog:0.4.2'
+    compile 'com.google.code.gson:gson:2.7'
 
+    compile 'com.android.support:percent:25.3.1'
+
+
+    compile 'com.github.arimorty:floatingsearchview:2.1.1'
+    compile 'com.jaredrummler:material-spinner:1.2.1'
+    compile 'com.github.drawers:SpinnerDatePicker:0.0.8'
 
 
     compile fileTree(dir: 'libs', include: ['*.jar'])

@@ -8,12 +8,10 @@
         app:showAsAction="never"/>
 
 
-
     <item
-        android:id="@+id/action_search"
-        android:icon="@drawable/ic_search_white_24dp"
+        android:id="@+id/bottom_navigation"
         android:orderInCategory="100"
-        android:title="Search flight here"
-        app:showAsAction="always"/>
+        android:title="Bottom Navigation"
+        />
 
 </menu>

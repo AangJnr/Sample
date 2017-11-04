@@ -7,10 +7,14 @@ package io.nothing.sample.utility;
 
 public class Constants {
 
+    public static final String TYPE_TEXT = "text";
+    public static final String TYPE_SELECTABLE = "selectable";
+    public static final String TYPE_CHECKBOX = "checkbox";
+    public static final String TYPE_TIMEPICKER = "timePicker";
+    public static final String TYPE_DATEPICKER = "datePikcer";
     public static String IS_USER_SIGNED_IN = "isUserSignedIn";
     public static String IS_RETAILER_SIGNED_IN = "isUserSignedIn";
     public static String IS_GAME_CENTER_SIGNED_IN = "isUserSignedIn";
-
     public static String USERS_PHONE = "phoneNo";
     public static String USER_NAME = "userName";
     public static String USER_AGE = "userAge";
@@ -19,8 +23,8 @@ public class Constants {
     public static String USER_TOKEN = "userToken";
     public static String USER_PHOTO_LOCAL_URL = "userProfilePhotoLocal";
     public static String USER_PHOTO_CLOUD_URL = "userProfilePhotoCloud";
-
     public static String IS_NIGHT_MODE = "isNightMode";
     public static int LAST_SELECTED_FRAGMENT = 1;
+
 
 }
