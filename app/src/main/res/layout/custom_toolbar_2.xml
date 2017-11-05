@@ -11,10 +11,10 @@
         android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
         android:layout_marginRight="@dimen/spacing_normal"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:clickable="true"
-
         android:src="@drawable/ic_arrow_back_black_24dp"
         android:tint="@color/white"
         />
@@ -22,12 +22,14 @@
 
     <TextView
         android:id="@+id/title"
-        style="@style/TextAppearance.AppCompat.Title"
+        style="@style/TextAppearance.AppCompat.Medium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/back"
+        android:text="Title"
         android:textColor="@color/white"
+        android:textStyle="bold"
 
         />
 

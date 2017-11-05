@@ -57,14 +57,14 @@ public class FlightStatusActivity extends BaseActivity {
 
 
         flightStatusList = new ArrayList<>();
-        flightStatusList.add(new FlightStatus("air1290", "Sunday, 21", "jfk", "13:00 pm", "acc", "18:21 pm", "3 hours, 00 mins", "50 mins"));
-        flightStatusList.add(new FlightStatus("bru1430", "Monday, 22", "acc", "1:00 pm", "ksi", "1:21 pm", "4 hours, 30 mins", "1 hour"));
-        flightStatusList.add(new FlightStatus("cal560", "Monday, 22", "ksi", "5:00 pm", "acc", "8:21 pm", "6 hours, 00 mins", "2 hours, 30 mins"));
-        flightStatusList.add(new FlightStatus("awa390", "Tuesday, 23", "jfk", "18:00 pm", "acc", "21:21 pm", "3 hours, 00 mins", "1 hour"));
-        flightStatusList.add(new FlightStatus("awa120", "Wednesday, 24", "acc", "6:00 pm", "mia", "13:00 pm", "2 hours, 30 mins", "3 hours, 40 mins"));
-        flightStatusList.add(new FlightStatus("air560", "Wednesday, 24", "acc", "3:00 pm", "was", "2:00 pm", "4 hours, 00 mins", "2 hours, 20 mins"));
-        flightStatusList.add(new FlightStatus("air90", "Wednesday, 24", "acc", "6:00 pm", "mia", "14:00 pm", "5 hours, 30 mins", "5 hours, 10 mins"));
-        flightStatusList.add(new FlightStatus("air127", "Thursday, 25", "acc", "23:30 pm", "jfk", "18:50 pm", "2 hours, 30 mins", "3 hours, 50 mins"));
+        flightStatusList.add(new FlightStatus("air1290", "Sunday, 21", "jfk", "13:00 pm", "acc", "18:21 pm", "3 hours", "50 mins"));
+        flightStatusList.add(new FlightStatus("bru1430", "Monday, 22", "acc", "1:00 pm", "ksi", "1:21 pm", "4 hours 30 mins", "1 hour"));
+        flightStatusList.add(new FlightStatus("cal560", "Monday, 22", "ksi", "5:00 pm", "acc", "8:21 pm", "6 hours 00 mins", "2 hours 30 mins"));
+        flightStatusList.add(new FlightStatus("awa390", "Tuesday, 23", "jfk", "18:00 pm", "acc", "21:21 pm", "4 hours", "1 hour"));
+        flightStatusList.add(new FlightStatus("awa120", "Wednesday, 24", "acc", "6:00 pm", "mia", "13:00 pm", "2 hours 30 mins", "3 hours 40 mins"));
+        flightStatusList.add(new FlightStatus("air560", "Wednesday, 24", "acc", "3:00 pm", "was", "2:00 pm", "4 hours 10 mins", "2 hours 20 mins"));
+        flightStatusList.add(new FlightStatus("air90", "Wednesday, 24", "acc", "6:00 pm", "mia", "14:00 pm", "5 hours 30 mins", "5 hours 10 mins"));
+        flightStatusList.add(new FlightStatus("air127", "Thursday, 25", "acc", "23:30 pm", "jfk", "18:50 pm", "2 hours 30 mins", "3 hours 50 mins"));
 
 
         if (flightStatusList != null)

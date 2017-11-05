@@ -86,6 +86,17 @@ public class DashBoardActivity extends BaseActivity {
 
             }
         });
+
+
+        findViewById(R.id.manage_booking).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(DashBoardActivity.this, ManageBookingActivity.class));
+
+
+            }
+        });
     }
 
 

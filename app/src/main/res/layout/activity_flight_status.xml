@@ -97,6 +97,8 @@
         app:floatingSearch_dimBackground="false"
         app:floatingSearch_hintTextColor="@color/divider_2"
         app:floatingSearch_searchHint="Enter flight number(eg. AIR008)"
+        app:floatingSearch_searchInputTextSize="5sp"
+        app:floatingSearch_searchSuggestionTextSize="@dimen/text_size_small"
 
         >
 
@@ -108,7 +110,11 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button">
+        android:layout_below="@id/button"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/spacing_normal"
+        >
 
 
     </android.support.v7.widget.RecyclerView>
