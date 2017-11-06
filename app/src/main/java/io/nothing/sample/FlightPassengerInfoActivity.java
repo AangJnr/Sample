@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
@@ -17,7 +18,7 @@ public class FlightPassengerInfoActivity extends BaseActivity {
 
     //Views
 
-    Button proceedButton;
+    Button payForBooking;
 
 
     TextView customToolbarTextView;
@@ -48,14 +49,20 @@ public class FlightPassengerInfoActivity extends BaseActivity {
     void setupAndInitializeViews() {
 
 
-        titleSpinner = (MaterialSpinner) findViewById(R.id.departure_date_spinner);
+        titleSpinner = (MaterialSpinner) findViewById(R.id.title_spinner);
         titleSpinner.setItems("Mr.", "Mrs.", "Miss", "Dr.");
 
         nameEdittext = (EditText) findViewById(R.id.nameEditText);
         emailEdittext = (EditText) findViewById(R.id.emailEdittext);
 
 
-        proceedButton = (Button) findViewById(R.id.button);
+        payForBooking = (Button) findViewById(R.id.button);
+        payForBooking.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(FlightPassengerInfoActivity.this, "PAY!", Toast.LENGTH_LONG).show();
+            }
+        });
 
 
     }

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/background"
@@ -48,73 +47,58 @@
 
     </RelativeLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="160dp"
-        android:layout_below="@+id/custom_toolbar"
-        android:background="@color/colorPrimary"
-        />
-
 
     <LinearLayout
         android:id="@+id/custom_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:paddingBottom="@dimen/spacing_half"
+        android:layout_height="200dp"
+        android:background="@drawable/dashboard_upper_img"
+        android:orientation="vertical"
         >
 
+        <include layout="@layout/custom_toolbar_2_no_background"/>
 
-        <include layout="@layout/custom_toolbar_2"/>
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-light"
+            android:paddingBottom="@dimen/spacing_half"
+            android:paddingTop="@dimen/spacing_normal"
+            android:text="Africa World Airlines"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_large"
+            android:textStyle="bold"
+            />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="sans-serif-light"
+            android:text="Experience Seamless flight schedules, book and pay."
+            android:textColor="@color/text_white_87"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold"
+            />
 
     </LinearLayout>
-
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/custom_toolbar"
-        android:layout_marginBottom="@dimen/spacing_normal"
-        android:layout_marginLeft="@dimen/spacing_2"
-        android:layout_marginRight="@dimen/spacing_2"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:text="Search Flight"
-        android:theme="@style/PrimaryButtonAccent2"
-
-
-        />
-
-
-    <com.arlib.floatingsearchview.FloatingSearchView
-        android:id="@+id/search_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/custom_toolbar"
-        android:layout_marginLeft="@dimen/spacing_2"
-        android:layout_marginRight="@dimen/spacing_2"
-        app:floatingSearch_close_search_on_keyboard_dismiss="true"
-        app:floatingSearch_dimBackground="false"
-        app:floatingSearch_hintTextColor="@color/divider_2"
-        app:floatingSearch_searchHint="Enter flight number(eg. AIR008)"
-        app:floatingSearch_searchInputTextSize="5sp"
-        app:floatingSearch_searchSuggestionTextSize="@dimen/text_size_small"
-
-        >
-
-
-    </com.arlib.floatingsearchview.FloatingSearchView>
 
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="160dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-        android:paddingBottom="@dimen/spacing_normal"
-        >
+        android:paddingBottom="@dimen/spacing_normal">
 
 
     </android.support.v7.widget.RecyclerView>

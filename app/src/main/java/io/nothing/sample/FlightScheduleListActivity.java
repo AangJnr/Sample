@@ -1,5 +1,6 @@
 package io.nothing.sample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,18 +17,18 @@ import com.jaredrummler.materialspinner.MaterialSpinner;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.nothing.sample.adapter.FlightStatusRecyclerViewAdapter;
-import io.nothing.sample.pojo.FlightStatus;
+import io.nothing.sample.adapter.FlightScheduleRecyclerViewAdapter;
+import io.nothing.sample.pojo.FlightSchedule;
 
 /**
  * Created by aangjnr on 04/11/2017.
  */
 
-public class FlightStatusActivity extends BaseActivity {
+public class FlightScheduleListActivity extends BaseActivity {
 
     //Views
 
-    List<FlightStatus> flightStatusList;
+    List<FlightSchedule> flightScheduleList;
 
     RecyclerView mRecycler;
     Button continueButton;
@@ -39,16 +40,16 @@ public class FlightStatusActivity extends BaseActivity {
     RelativeLayout placeHolder;
 
 
-    FlightStatusRecyclerViewAdapter mAdapter;
+    FlightScheduleRecyclerViewAdapter mAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_flight_status);
+        setContentView(R.layout.activity_flight_schedule_list);
         mRecycler = (RecyclerView) findViewById(R.id.recycler_view);
 
-        customToolbarTextView = setCustomToolbarTitle("Flight Status");
+        customToolbarTextView = setCustomToolbarTitle("Flight Schedule List");
         findViewById(R.id.menu).setVisibility(View.GONE);
 
 
@@ -56,19 +57,19 @@ public class FlightStatusActivity extends BaseActivity {
         setupAndInitializeViews();
 
 
-        flightStatusList = new ArrayList<>();
-        flightStatusList.add(new FlightStatus("air1290", "Sunday, 21", "jfk", "13:00 GMT", "acc", "18:21 GMT", "3 hours", "50 mins"));
-        flightStatusList.add(new FlightStatus("bru1430", "Monday, 22", "acc", "1:00 GMT", "ksi", "1:21 GMT", "4 hours 30 mins", "1 hour"));
-        flightStatusList.add(new FlightStatus("cal560", "Monday, 22", "ksi", "5:00 GMT", "acc", "8:21 GMT", "6 hours 00 mins", "2 hours 30 mins"));
-        flightStatusList.add(new FlightStatus("awa390", "Tuesday, 23", "jfk", "18:00 GMT", "acc", "21:21 GMT", "3 hours", "1 hour"));
-        flightStatusList.add(new FlightStatus("awa120", "Wednesday, 24", "acc", "6:00 GMT", "mia", "13:00 GMT", "2 hours 30 mins", "3 hours 40 mins"));
-        flightStatusList.add(new FlightStatus("air560", "Wednesday, 24", "acc", "3:00 GMT", "was", "2:00 GMT", "4 hours 10 mins", "2 hours 20 mins"));
-        flightStatusList.add(new FlightStatus("air90", "Wednesday, 24", "acc", "6:00 GMT", "mia", "14:00 GMT", "5 hours 30 mins", "5 hours 10 mins"));
-        flightStatusList.add(new FlightStatus("air127", "Thursday, 25", "acc", "2:30 GMT", "jfk", "18:50 GMT", "2 hours 30 mins", "3 hours 50 mins"));
+        flightScheduleList = new ArrayList<>();
+        flightScheduleList.add(new FlightSchedule("Abuja", "12:40 GMT, 21", "Mon - Sun", "ABJ", "Accra", "3:00 GMT", "Mon - Sun", "ACC"));
+        flightScheduleList.add(new FlightSchedule("Abuja", "1:00 GMT, 21", "Mon - Sun", "ABJ", "Accra", "8:00 GMT", "Mon - Sun", "ACC"));
+        flightScheduleList.add(new FlightSchedule("Abuja", "2:00 GMT, 21", "Mon - Sun", "ABJ", "Accra", "9:00 GMT", "Mon - Sun", "ACC"));
+        flightScheduleList.add(new FlightSchedule("Abuja", "3:00 GMT, 21", "Mon - Sun", "ABJ", "Accra", "12:00 GMT", "Mon - Sun", "ACC"));
+        flightScheduleList.add(new FlightSchedule("Abuja", "4:00 GMT, 21", "Mon - Sun", "ABJ", "Accra", "13:01 GMT", "Mon - Sun", "ACC"));
+        flightScheduleList.add(new FlightSchedule("Abuja", "5:00 GMT, 21", "Mon - Sun", "ABJ", "Accra", "14:00 GMT", "Mon - Sun", "ACC"));
+        flightScheduleList.add(new FlightSchedule("Abuja", "6:00 GMT, 21", "Mon - Sun", "ABJ", "Accra", "15:30 GMT", "Mon - Sun", "ACC"));
+        flightScheduleList.add(new FlightSchedule("Abuja", "7:00 GMT, 21", "Mon - Sun", "ABJ", "Accra", "17:20 GMT", "Mon - Sun", "ACC"));
 
 
-        if (flightStatusList != null)
-            if (flightStatusList.size() == 0) {
+        if (flightScheduleList != null)
+            if (flightScheduleList.size() == 0) {
 
                 placeHolder.setVisibility(View.VISIBLE);
 
@@ -78,26 +79,24 @@ public class FlightStatusActivity extends BaseActivity {
                 if (placeHolder.getVisibility() == View.VISIBLE)
                     placeHolder.setVisibility(View.GONE);
 
-                mAdapter = new FlightStatusRecyclerViewAdapter(this, flightStatusList);
+                mAdapter = new FlightScheduleRecyclerViewAdapter(this, flightScheduleList);
                 mRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
                 mAdapter.setHasStableIds(true);
                 mRecycler.setAdapter(mAdapter);
                 startFadeInAnimation(mRecycler);
 
 
-                mAdapter.setOnItemClickListener(new FlightStatusRecyclerViewAdapter.OnItemClickListener() {
+                mAdapter.setOnItemClickListener(new FlightScheduleRecyclerViewAdapter.OnItemClickListener() {
                     @Override
                     public void onItemClick(View view, int position) {
+
+
+                        startActivity(new Intent(FlightScheduleListActivity.this, FlightSummaryActivity.class));
 
                     }
                 });
 
             }
-
-
-
-
-
 
 
     }

@@ -1,5 +1,6 @@
 package io.nothing.sample;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.percent.PercentRelativeLayout;
@@ -113,6 +114,12 @@ public class BookFlightActivity extends BaseActivity {
         }
 
         continueButton = (Button) findViewById(R.id.button);
+        continueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(BookFlightActivity.this, FlightScheduleListActivity.class));
+            }
+        });
 
         tripSourceEdittext = (EditText) findViewById(R.id.source_edittext);
 

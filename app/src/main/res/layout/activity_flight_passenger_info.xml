@@ -212,7 +212,7 @@
             android:layout_marginLeft="@dimen/spacing_2"
             android:layout_marginRight="@dimen/spacing_2"
             android:layout_marginTop="@dimen/spacing_normal"
-            android:text="Proceed"
+            android:text="Pay for booking"
             android:theme="@style/PrimaryButtonAccent"
 
 
