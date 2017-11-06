@@ -92,7 +92,7 @@ public class DashBoardActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(DashBoardActivity.this, ManageBookingActivity.class));
+                startActivity(new Intent(DashBoardActivity.this, ManageBooking2Activity.class));
 
 
             }

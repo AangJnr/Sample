@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+
+    <include layout="@layout/custom_toolbar_2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_half"
+        android:padding="@dimen/spacing_normal"
+        android:text="Welcome to African World Airlines Mobile Check-In"
+        android:textColor="@android:color/primary_text_light"
+        android:visibility="gone"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/spacing_normal"
+
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            >
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/spacing_half"
+                android:text="GHS"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                style="@style/TextAppearance.AppCompat.Large"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/spacing_half"
+                android:text="346.00"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/spacing_quarter"
+            android:text="Total Cost"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_2"
+                android:paddingRight="@dimen/spacing_2"
+                >
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Title"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+                <com.jaredrummler.materialspinner.MaterialSpinner
+                    android:id="@+id/title_spinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:ellipsize="end"
+                    android:hint="Select Title"
+                    android:maxLines="1"
+                    app:ms_arrow_tint="@color/colorPrimary"
+                    app:ms_background_color="@color/background"
+                    />
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Full Name"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/nameEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:hint="Enter your full name"
+                    android:maxLines="1"
+                    android:padding="@dimen/spacing_normal"
+                    android:textSize="@dimen/text_size_small"
+                    />
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Email"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/emailEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:hint="Enter your email address"
+                    android:maxLines="1"
+                    android:padding="@dimen/spacing_normal"
+                    android:textSize="@dimen/text_size_small"
+                    />
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Phone Number"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <com.lamudi.phonefield.PhoneInputLayout
+                    android:id="@+id/phoneInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_background"
+
+                    >
+
+
+                </com.lamudi.phonefield.PhoneInputLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_marginLeft="@dimen/spacing_2"
+            android:layout_marginRight="@dimen/spacing_2"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:text="Proceed"
+            android:theme="@style/PrimaryButtonAccent"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

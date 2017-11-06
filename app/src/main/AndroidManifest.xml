@@ -51,6 +51,8 @@
         <activity android:name=".FlightScheduleActivity"/>
         <activity android:name=".FlightStatusActivity"/>
         <activity android:name=".ManageBookingActivity"/>
+        <activity android:name=".ManageBooking2Activity"/>
+        <activity android:name=".FlightSummaryActivity"/>
 
     </application>
 

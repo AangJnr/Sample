@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+
+    <include layout="@layout/custom_toolbar_2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_half"
+        android:padding="@dimen/spacing_normal"
+        android:text="Welcome to African World Airlines Trip Manager"
+        android:textColor="@android:color/primary_text_light"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/button"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/spacing_2"
+                android:paddingRight="@dimen/spacing_2"
+                >
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Full Name"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+                <EditText
+                    android:id="@+id/nameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:ellipsize="end"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:padding="@dimen/spacing_normal"
+                    />
+
+
+                <TextView
+                    style="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:layout_marginTop="@dimen/spacing_normal"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Booking Reference or E-Ticketing Number"
+                    android:textColor="@android:color/primary_text_light"
+
+                    />
+
+
+                <EditText
+                    android:id="@+id/referenceNoEdittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/spacing_half"
+                    android:background="@drawable/border_background"
+                    android:maxLines="1"
+                    android:padding="@dimen/spacing_normal"
+                    android:textAllCaps="true"
+                    />
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/spacing_normal"
+            android:layout_marginLeft="@dimen/spacing_2"
+            android:layout_marginRight="@dimen/spacing_2"
+            android:layout_marginTop="@dimen/spacing_normal"
+            android:text="Get Trip Information"
+            android:theme="@style/PrimaryButtonAccent"
+
+
+            />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
