@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
+import com.lamudi.phonefield.PhoneInputLayout;
 
 /**
  * Created by aangjnr on 04/11/2017.
@@ -27,6 +28,7 @@ public class FlightPassengerInfoActivity extends BaseActivity {
     EditText emailEdittext;
 
     MaterialSpinner titleSpinner;
+    PhoneInputLayout phoneInputLayout;
 
 
     @Override
@@ -64,6 +66,8 @@ public class FlightPassengerInfoActivity extends BaseActivity {
             }
         });
 
+
+        phoneInputLayout = (PhoneInputLayout) findViewById(R.id.phoneInputLayout);
 
     }
 
