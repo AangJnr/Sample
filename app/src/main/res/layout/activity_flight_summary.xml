@@ -274,7 +274,7 @@
                             android:ellipsize="end"
                             android:maxLength="40"
                             android:maxLines="1"
-                            android:text="30-Sept-17 - 09:45 am"
+                            android:text="30-Sept-17  09:45 am"
                             android:textColor="@android:color/primary_text_light"
                             />
 
@@ -305,7 +305,7 @@
                             android:ellipsize="end"
                             android:maxLength="40"
                             android:maxLines="1"
-                            android:text="30-Sept-17 - 09:45 am"
+                            android:text="30-Sept-17  09:45 am"
                             android:textColor="@android:color/primary_text_light"
                             />
 
